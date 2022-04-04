@@ -23,7 +23,7 @@ get_network_interfaces(){
 
 # Main
 
-#login
-#get_security_groups
-#get_network_interfaces
+login
+get_security_groups
+get_network_interfaces
 node build-csv.js
