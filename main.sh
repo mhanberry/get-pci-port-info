@@ -25,8 +25,8 @@ get_network_interfaces(){
 
 # Main
 
-login
-get_security_groups
-get_network_interfaces
+#login
+#get_security_groups
+#get_network_interfaces
 echo 'building pci-table.csv...'
 node build-csv.js
