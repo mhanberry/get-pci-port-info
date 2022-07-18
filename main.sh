@@ -9,10 +9,6 @@ fi
 
 PROFILE="$1"
 
-login(){
-	aws --profile $PROFILE sso login
-}
-
 get_security_groups(){
 	echo 'retrieving security groups...'
 	aws --profile $PROFILE ec2 describe-security-groups --output json > security-groups.json
@@ -26,7 +22,7 @@ get_network_interfaces(){
 # Main
 
 #login
-#get_security_groups
-#get_network_interfaces
+get_security_groups
+get_network_interfaces
 echo 'building pci-table.csv...'
 node build-csv.js
